@@ -7,6 +7,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import template from './../template';
 import devBundle from './devBundle';
+import userRoutes from './routes/user.routes'
+
 
 const app = express();
 
@@ -27,6 +29,9 @@ app.use(compress());
 app.use(helmet());
 // enable CORS - Cross Origin Resource Sharing
 app.use(cors());
+
+//routes
+app.use('/', userRoutes);
 
 
 app.get('/', (req, res) => {
