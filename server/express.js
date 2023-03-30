@@ -15,7 +15,6 @@ const app = express();
 // comment out before building
 devBundle.compile(app);
 
-
 const CURRENT_WORKING_DIR = process.cwd();
 
 app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')));
@@ -36,6 +35,15 @@ app.use('/', authRoutes);
 
 app.get('/', (req, res) => {
   res.status(200).send(template());
+});
+
+app.use((err, req, res, next) => {
+  if (err.name === 'UnauthorizedError') {
+    res.status(401).json({ error: err.name + ': ' + err.message });
+  } else if (err) {
+    res.status(400).json({ error: err.name + ': ' + err.message });
+    console.log(err);
+  }
 });
 
 export default app;
