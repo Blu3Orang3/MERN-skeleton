@@ -1,6 +1,6 @@
 {
   "name": "skeleton",
-  "version": "1.0.0",
+  "version": "1.0.0=backend-finished",
   "description": "MERN skeleton with CRUD and JWT auth",
   "main": "index.js",
   "scripts": {
