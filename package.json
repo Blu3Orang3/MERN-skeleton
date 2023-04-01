@@ -50,5 +50,12 @@
     "webpack-dev-middleware": "^6.0.2",
     "webpack-hot-middleware": "^2.25.3",
     "webpack-node-externals": "^3.0.0"
+  },
+  "overrides": {
+    "react-hot-loader": {
+      "peerDependencies": {
+        "@types/react": ">=15.0.0"
+      }
+    }
   }
 }
