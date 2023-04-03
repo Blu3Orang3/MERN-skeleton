@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import unicornbikeImg from './../assets/images/unicornbike.jpg';
+import houses from './../assets/images/houses.webp';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -42,25 +42,9 @@ export default function Home() {
       </Typography>
       <CardMedia
         className={classes.media}
-        image={unicornbikeImg}
-        title='Unicorn Bicycle'
+        image={houses}
+        title='winter houses aesthetic'
       />
-      <Typography
-        variant='body2'
-        component='p'
-        className={classes.credit}
-        color='textSecondary'
-      >
-        Photo by{' '}
-        <a
-          href='https://unsplash.com/@boudewijn_huysmans'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Boudewijn Huysmans
-        </a>{' '}
-        on Unsplash
-      </Typography>
       <CardContent>
         <Typography variant='body1' component='p'>
           Welcome to the MERN Skeleton home page.
