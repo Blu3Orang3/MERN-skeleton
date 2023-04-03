@@ -6,13 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import HomeIcon from '@mui/icons-material/Home';
 import Button from '@mui/material/Button';
 import auth from './../auth/auth-helper';
-import {
-  Link,
-  withRouter,
-  useLocation,
-  useNavigate,
-  useParams,
-} from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const isActive = (location, path) => {
   if (location.pathname == path) return { color: '#ff4081' };
