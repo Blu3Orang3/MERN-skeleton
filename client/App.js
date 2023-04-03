@@ -6,6 +6,12 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 
 const App = () => {
+  React.useEffect(() => {
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles) {
+      jssStyles.parentNode.removeChild(jssStyles);
+    }
+  }, []);
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
